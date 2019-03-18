@@ -309,7 +309,7 @@
     transform: scale(1);
 }
 .event__content {
-    text-transform: uppercase;
+    text-transform: none;
     font-size: 0.9em;
     font-weight: 600;
 }
