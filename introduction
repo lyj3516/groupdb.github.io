@@ -1,0 +1,32 @@
+{
+    "Room_id":1,                             # 房间编号
+    "sensors": [		#房间内的sensor集
+        {                                   
+            "online": 1,                        "online"字段，1代表在线，0代表下线
+            "type": "light",		"type"字段， "light"代表光敏sensor, "motion"代表移动sensor，"button"代表按钮
+            "data": "bright",	       "data"与type对应，"light"的取值为"bright" 室内光线充足 & "dark" 室内光线不足; 
+            "last": 156789                “last”表示数据采集时间 数值为标准时间戳   
+        },                                           
+        {
+            "online": 1,
+            "type": "motion",                    "motion"取值为“Exist”有人 & "No"无人
+            "data": "Exist",
+            "last": 156789
+        },
+        {
+            "online": 1,
+            "type": "button",                  "button"取值为"Pressed" 按下 & "No" 未按下
+            "data": "Pressed",
+            "last": 156789.3
+        }
+    ],
+    "device": {		#设备 指房间内的灯
+        "online": 1,		#同上
+        "type": "Light",		#指灯
+        "data": "True",		#True代表灯亮   False代表灯暗
+        "last": 156789.3			
+    },
+    "cmd_type": "Command",	#指令类型
+    "authority": 0,		#指令发起者权限， 1是学生 2 是教师
+    "cmd_data":"on"		#指令数据，对开关灯指令"command"而言，"on"代表指令是“开灯”
+}
