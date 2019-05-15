@@ -1,0 +1,40 @@
+{
+     'rid': [
+		"{'BID': 3,                    #大楼编号
+		'RID': 4}"                     #房间编号           
+		],                             
+    "sensors": [		#房间内的sensor集
+        {                                   
+            "online": 1,                        "online"字段，1代表在线，0代表下线
+            "type": "light",		"type"字段， "1"代表光敏sensor, "2"代表移动sensor，"3"代表按钮
+            "data": "bright",	       "data"与type对应，"light"的取值为"1" 室内光线充足 & "0" 室内光线不足; 
+            "last": 156789                “last”表示数据采集时间 数值为标准时间戳   
+        },                                           
+        {
+            "online": 1,
+            "type": "2",                    "motion"取值为“1”有人 & "0"无人
+            "data": "0",
+            "last": 156789
+        },
+        {
+            "online": 1,
+            "type": "button",                  "button"取值为"1" 按下 & "0" 未按下
+            "data": "Pressed",
+            "last": 156789.3
+        }
+    ]
+    "device": {		#设备 指房间内的灯
+        "online": 1,		#同上
+        "type": "0",		#指灯
+        "data": "0",		#0代表灯暗, 1 代表等亮
+        "last": 156789.3			
+    },
+    "sorce":"which hardware change this data"
+    "authority": 0,		#指令发起者权限，0无指令（心跳包） 1是学生 2 是教师
+    "cmd":"1"		#指令数据，对开关灯指令"command"而言，"0"代表指令是“开灯”， "0"代表关灯
+}
+b'Room_id=0&sensors=%5B%7B%27online%27%3A+1%2C+%27type%27%3A+%27light%27%2C+%27data%27%3A+%27bright%27%2C+%27last%27%3A+156789%7D%2C+%7B%27online%27%3A+1%2C+%27type%27%3A+%27motion%27%2C+%27data%27%3A+%27Exist%27%2C+%27last%27%3A+156789%7D%2C+%7B%27online%27%3A+1%2C+%27type%27%3A+%27button%27%2C+%27data%27%3A+%27Pressed%27%2C+%27last%27%3A+156789%7D%5D&device=%7B%27online%27%3A+1%2C+%27type%27%3A+%27Light%27%2C+%27data%27%3A+%27True%27%2C+%27last%27%3A+156789.3%7D&cmd_type=Command&authority=%5B0%2C+1%5D&cmd_data=on'
+
+
+
+{'rid': ["{'BID': 3, 'RID': 1}"], 'time': ['1557884172.284275'], 'sensors': ["[{'hid': 'S1', 'online': 0, 'type': 1, 'data': 'offline', 'last': 0.0}, {'hid': 'S2', 'online': 0, 'type': 2, 'data': 'offline', 'last': 0.0}]"], 'device': ["[{'hid': 'L2', 'online': 0, 'type': 0, 'data': 'offline', 'last': 0.0}, {'hid': 'L3', 'online': 0, 'type': 0, 'data': 'offline', 'last': 0.0}]"], 'authority': ['0'], 'cmd': ['0']}
