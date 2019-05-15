@@ -1,0 +1,17 @@
+last_authority = {bid-rid: 1/2}
+last_instruction_time = {bid-rid: time}
+last_people = {bid-rid: time(last motion == 1)}
+
+string list =["instruction:0/1   off/on", "currentuser:0/1/2  xintiao/stu/teacher", "authoritycompara: 0/1  now<= last_authority(first 1)/>", "instruction_cover: nowtime - last_instruction_time >1min 1/0 ", "light_state: 1/0 on/off ", "brightness: 1/0 high/low", 
+"have_people: 0/1 no/have (updata the last_people)", "nobody_set: 0/1 /(have_people == 0 && nowtime - last_people > 2min 1)", 
+"button_set: 1/0 push/no" ]
+
+
+
+no sensors data = 0 
+
+
+
+sensors_type: 1, 2, 3  bright, motion, button  
+
+{'rid': ["{'BID': 3, 'RID': 4}"], 'time': ['1557886818.434217'], 'sensors': ["[{'hid': 'S3', 'online': 0, 'type': 1, 'data': 0, 'last': 0.0}]"], 'device': ["[{'hid': 'L3', 'online': 0, 'type': 0, 'data': 0, 'last': 0.0}]"], 'authority': ['0'], 'cmd': ['0']}
