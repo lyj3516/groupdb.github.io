@@ -115,7 +115,7 @@ string list =["instruction:0/1   off/on", "currentuser:0/1/2  xintiao/stu/teache
     
 # =============================================================================
 # 
-#     #加入计算控制函数
+#     #add the fuction of algorism 
 #     (int)r_action, (str)r_message, (int)r_status = fuction(parameters_list) 
 #     turn on(1) or off(0) ,  the information,  cmd can be done(1) or not(0)
 #     
